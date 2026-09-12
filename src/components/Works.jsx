@@ -1,5 +1,4 @@
 import React from "react";
-import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -18,12 +17,10 @@ const ProjectCard = ({
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
+      <motion.div
+        whileHover={{ rotateX: 8, rotateY: -8, scale: 1.02 }}
+        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+        style={{ transformPerspective: 1000 }}
         className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
       >
         <div className='relative w-full h-[230px]'>
@@ -62,7 +59,7 @@ const ProjectCard = ({
             </p>
           ))}
         </div>
-      </Tilt>
+      </motion.div>
     </motion.div>
   );
 };
