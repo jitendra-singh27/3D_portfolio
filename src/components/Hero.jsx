@@ -5,7 +5,7 @@ import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
   return (
-    <section className='relative w-full min-h-[680px] h-screen max-h-[980px] mx-auto overflow-hidden'>
+    <section className='relative w-full min-h-[680px] h-screen max-h-[980px] mx-auto overflow-hidden bg-primary sm:bg-transparent'>
       <div
         className={`absolute inset-x-0 top-[112px] sm:top-[132px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-3 sm:gap-5`}
       >
@@ -15,10 +15,10 @@ const Hero = () => {
         </div>
 
         <div className='min-w-0'>
-          <h1 className={`${styles.heroHeadText} text-white`}>
+          <h1 className={`${styles.heroHeadText} hero-heading text-white`}>
             Hi, I'm <span className='text-[#915EFF]'>Jitendra Singh</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+          <p className={`${styles.heroSubText} hero-subheading mt-2 text-white-100`}>
             I develop scalable web applications <br className='sm:block hidden' />
             using React, NextJs, Express , Node.js and other cool
             technologies.

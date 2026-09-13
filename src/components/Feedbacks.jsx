@@ -4,42 +4,18 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
-import { testimonials } from "../constants";
+import { proofPoints } from "../constants";
 
-const FeedbackCard = ({
-  index,
-  testimonial,
-  name,
-  designation,
-  company,
-  image,
-}) => (
+const ProofCard = ({ index, title, detail, label }) => (
   <motion.div
     variants={fadeIn("", "spring", index * 0.5, 0.75)}
-    className='bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full'
+    className='bg-black-200 p-6 sm:p-8 rounded-3xl xs:w-[320px] w-full flex-1 min-w-0'
   >
-    <p className='text-white font-black text-[48px]'>"</p>
-
-    <div className='mt-1'>
-      <p className='text-white tracking-wider text-[18px]'>{testimonial}</p>
-
-      <div className='mt-7 flex justify-between items-center gap-1'>
-        <div className='flex-1 flex flex-col'>
-          <p className='text-white font-medium text-[16px]'>
-            <span className='blue-text-gradient'>@</span> {name}
-          </p>
-          <p className='mt-1 text-secondary text-[12px]'>
-            {designation} of {company}
-          </p>
-        </div>
-
-        <img
-          src={image}
-          alt={`feedback_by-${name}`}
-          className='w-10 h-10 rounded-full object-cover'
-        />
-      </div>
-    </div>
+    <p className='text-[#915EFF] font-bold text-sm uppercase tracking-wider'>
+      {label}
+    </p>
+    <h3 className='mt-5 text-white font-bold text-xl'>{title}</h3>
+    <p className='mt-3 text-secondary text-[15px] leading-7'>{detail}</p>
   </motion.div>
 );
 
@@ -47,16 +23,19 @@ const Feedbacks = () => {
   return (
     <div className={`mt-12 bg-black-100 rounded-[20px]`}>
       <div
-        className={`bg-tertiary rounded-2xl ${styles.padding} min-h-[300px]`}
+        className={`bg-tertiary rounded-2xl ${styles.padding} pb-24 sm:pb-28 min-h-[300px]`}
       >
         <motion.div variants={textVariant()}>
-          <p className={styles.sectionSubText}>What others say</p>
-          <h2 className={styles.sectionHeadText}>Testimonials.</h2>
+          <p className={styles.sectionSubText}>What I bring</p>
+          <h2 className={styles.sectionHeadText}>Working together.</h2>
+          <p className='mt-4 max-w-2xl text-secondary text-[16px] leading-7'>
+            I am building my collection of verified client testimonials. Until then, here is what you can expect when we work together.
+          </p>
         </motion.div>
       </div>
-      <div className={`-mt-20 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
-        {testimonials.map((testimonial, index) => (
-          <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
+      <div className={`mt-6 sm:mt-8 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
+        {proofPoints.map((point, index) => (
+          <ProofCard key={point.title} index={index} {...point} />
         ))}
       </div>
     </div>

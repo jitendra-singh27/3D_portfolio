@@ -143,30 +143,24 @@ const experiences = [
   },
 ];
 
-const testimonials = [
+const proofPoints = [
   {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    title: "Production-ready delivery",
+    detail:
+      "I build and ship full-stack applications with React, Node.js, Express, and MongoDB, from the first idea through deployment.",
+    label: "5+ projects delivered",
   },
   {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    title: "Secure, maintainable systems",
+    detail:
+      "Authentication, authorization, database design, and clean reusable code are part of the implementation, not afterthoughts.",
+    label: "MERN stack",
   },
   {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    title: "Clear collaboration",
+    detail:
+      "I work closely with designers, developers, and clients through planning, code reviews, feedback, and iterative delivery.",
+    label: "Open to collaboration",
   },
 ];
 
@@ -237,4 +231,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, proofPoints, projects };

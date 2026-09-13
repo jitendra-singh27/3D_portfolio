@@ -11,7 +11,7 @@ const ServiceCard = ({ index, title, icon }) => (
     whileHover={{ rotateX: 8, rotateY: -8, scale: 1.02 }}
     transition={{ type: "spring", stiffness: 300, damping: 20 }}
     style={{ transformPerspective: 1000 }}
-    className='xs:w-[250px] w-full'
+    className='w-full'
   >
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
@@ -61,7 +61,7 @@ const About = () => {
         real-world problems. Let's work together to bring your ideas to life!
       </motion.p>
 
-      <div className='mt-12 sm:mt-20 flex flex-wrap justify-center lg:justify-start gap-6 sm:gap-10'>
+      <div className='mt-12 sm:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

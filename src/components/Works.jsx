@@ -21,7 +21,7 @@ const ProjectCard = ({
         whileHover={{ rotateX: 8, rotateY: -8, scale: 1.02 }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
         style={{ transformPerspective: 1000 }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+        className='bg-tertiary p-5 rounded-2xl w-full h-full'
       >
         <div className='relative w-full h-[230px]'>
           <img
@@ -88,7 +88,7 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className='mt-12 sm:mt-20 flex flex-wrap justify-center gap-6 sm:gap-7'>
+      <div className='mt-12 sm:mt-20 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-7 items-stretch'>
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}

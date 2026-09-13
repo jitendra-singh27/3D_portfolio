@@ -41,7 +41,7 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
-          <p className='text-white text-base sm:text-[18px] font-bold cursor-pointer flex min-w-0'>
+          <p className='text-white text-base sm:text-[18px] font-bold cursor-pointer flex min-w-0 nav-name'>
             <span className='truncate'>Jitendra Singh</span>
             <span className='sm:block hidden whitespace-nowrap'>&nbsp; | Full Stack Web Developer</span>
           </p>

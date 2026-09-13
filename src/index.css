@@ -37,6 +37,23 @@ textarea {
   }
 }
 
+@media (max-width: 400px) {
+  .hero-heading {
+    font-size: 28px;
+    line-height: 1.08;
+  }
+
+  .hero-subheading {
+    max-width: 230px;
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .nav-name {
+    font-size: 12px;
+  }
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
