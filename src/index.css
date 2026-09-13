@@ -13,6 +13,30 @@
   color-scheme: dark;
 }
 
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+body {
+  background: #050816;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+@media (max-width: 640px) {
+  .canvas-loader {
+    transform: scale(0.85) translateZ(0);
+  }
+}
+
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;

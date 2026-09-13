@@ -28,7 +28,7 @@ const Navbar = () => {
   return (
     <nav
       className={`${styles.paddingX
-        } w-full flex items-center py-5 fixed top-0 z-20 ${scrolled ? "bg-primary" : "bg-transparent"
+        } w-full flex items-center py-4 sm:py-5 fixed top-0 z-20 ${scrolled ? "bg-primary/95 backdrop-blur-sm" : "bg-transparent"
         }`}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
@@ -41,9 +41,9 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
-          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            Jitendra Singh &nbsp;
-            <span className='sm:block hidden'> |  Full Stack Web Developer</span>
+          <p className='text-white text-base sm:text-[18px] font-bold cursor-pointer flex min-w-0'>
+            <span className='truncate'>Jitendra Singh</span>
+            <span className='sm:block hidden whitespace-nowrap'>&nbsp; | Full Stack Web Developer</span>
           </p>
         </Link>
 
@@ -64,13 +64,13 @@ const Navbar = () => {
           <img
             src={toggle ? close : menu}
             alt='menu'
-            className='w-[28px] h-[28px] object-contain'
+            className='w-7 h-7 object-contain cursor-pointer'
             onClick={() => setToggle(!toggle)}
           />
 
           <div
             className={`${!toggle ? "hidden" : "flex"
-              } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+              } p-5 black-gradient absolute top-16 sm:top-20 right-0 mx-3 sm:mx-4 my-2 min-w-[160px] z-10 rounded-xl`}
           >
             <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
               {navLinks.map((nav) => (
