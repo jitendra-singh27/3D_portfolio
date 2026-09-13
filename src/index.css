@@ -25,6 +25,12 @@ body {
   background: #050816;
 }
 
+.hero-canvas {
+  position: absolute !important;
+  inset: 0;
+  z-index: 0;
+}
+
 button,
 input,
 textarea {

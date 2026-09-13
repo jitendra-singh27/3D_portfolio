@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className='relative w-full min-h-[680px] h-screen max-h-[980px] mx-auto overflow-hidden bg-primary sm:bg-transparent'>
       <div
-        className={`absolute inset-x-0 top-[112px] sm:top-[132px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-3 sm:gap-5`}
+        className={`absolute inset-x-0 top-[112px] sm:top-[132px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-3 sm:gap-5 z-10`}
       >
         <div className='flex flex-col justify-center items-center mt-4 sm:mt-5 shrink-0'>
           <div className='w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-[#915EFF]' />
@@ -28,7 +28,7 @@ const Hero = () => {
 
       <ComputersCanvas />
 
-      <div className='absolute xs:bottom-10 bottom-8 sm:bottom-16 w-full flex justify-center items-center'>
+      <div className='absolute xs:bottom-10 bottom-8 sm:bottom-16 w-full flex justify-center items-center z-10'>
         <a href='#about'>
           <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
             <motion.div
