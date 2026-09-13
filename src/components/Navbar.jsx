@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { menu, close } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -40,7 +40,12 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
+          <span
+            aria-label='Jitendra Singh logo'
+            className='w-9 h-9 rounded-full bg-[#ff4a3f] text-white flex items-center justify-center text-xl font-black leading-none shrink-0'
+          >
+            J
+          </span>
           <p className='text-white text-base sm:text-[18px] font-bold cursor-pointer flex min-w-0 nav-name'>
             <span className='truncate'>Jitendra Singh</span>
             <span className='sm:block hidden whitespace-nowrap'>&nbsp; | Full Stack Web Developer</span>

@@ -9,7 +9,7 @@ import { proofPoints } from "../constants";
 const ProofCard = ({ index, title, detail, label }) => (
   <motion.div
     variants={fadeIn("", "spring", index * 0.5, 0.75)}
-    className='bg-black-200 p-6 sm:p-8 rounded-3xl xs:w-[320px] w-full flex-1 min-w-0'
+    className='bg-black-200 p-6 sm:p-8 rounded-3xl w-full min-w-0'
   >
     <p className='text-[#915EFF] font-bold text-sm uppercase tracking-wider'>
       {label}
@@ -33,7 +33,7 @@ const Feedbacks = () => {
           </p>
         </motion.div>
       </div>
-      <div className={`mt-6 sm:mt-8 pb-14 ${styles.paddingX} flex flex-wrap gap-7`}>
+      <div className={`mt-6 sm:mt-8 pb-14 ${styles.paddingX} grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-7 items-stretch`}>
         {proofPoints.map((point, index) => (
           <ProofCard key={point.title} index={index} {...point} />
         ))}
